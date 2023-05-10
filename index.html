@@ -4,7 +4,6 @@
 <body>
     <div id="qr-reader" style="width:500px"></div>
     <div id="qr-reader-results"></div>
-    <button id="flash-button">Toggle Flash</button>
 
 </body>
 <script src="html5-qrcode.min.js"></script>
@@ -35,12 +34,7 @@
         var html5QrcodeScanner = new Html5QrcodeScanner(
             "qr-reader", { fps: 10, qrbox: 250 });
         html5QrcodeScanner.render(onScanSuccess);
-        // Add a button to toggle the flash
-const flashButton = document.getElementById("flash-button");
-flashButton.onclick = () => {
-  // Toggle the flash
-  html5QrcodeScanner.setFlash(flashButton.checked);
-};
+
     });
     
 </script>
